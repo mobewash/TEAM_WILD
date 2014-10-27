@@ -170,9 +170,17 @@ public class DBAdapter {
 		return db.update(DATABASE_TABLE, newValues, where, null) != 0;
 	}
 	
+	public Cursor queryStuff(String a, String b)
+	{
+		String[] columns = {KEY_USER, KEY_PASSWORD};
+		//DATABASE_TABLE + "." + KEY_USER + " = \'" + a + "\' AND " + DATABASE_TABLE + "." + KEY_PASSWORD + " = \'" + b + "\'"
+		return db.query(DATABASE_TABLE, 
+				columns, 
+			    KEY_USER + " = \'" + a + "\' AND " + KEY_PASSWORD + " = \'" + b + "\'",
+				null, null, null, null);
+
+	}
 	
-	
-	/////////////////////////////////////////////////////////////////////
 	//	Private Helper Classes:
 	/////////////////////////////////////////////////////////////////////
 	

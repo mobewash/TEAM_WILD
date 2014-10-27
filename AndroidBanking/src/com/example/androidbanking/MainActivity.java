@@ -1,8 +1,11 @@
 package com.example.androidbanking;
 
+import com.example.databasedemo.DBAdapter;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -11,12 +14,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	Button CA_button, login_button;
-	//EditText mp_usertxt, mp_passwordtxt;
+	Button CA_button;
+	ImageButton login_button;
+	EditText mp_usertxt, mp_passwordtxt;
+	// Database
+	DBAdapter DB;
 	
 	
     @Override
@@ -25,9 +33,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
         
         CA_button = (Button) findViewById(R.id.button3);
-        //login_button = (Button)findViewById(R.id.homepagelogin_button);
-        //mp_usertxt = (EditText)findViewById(R.id.mainpage_user_txt);
-        //mp_passwordtxt = (EditText)findViewById(R.id.mainpage_password_txt);
+        login_button = (ImageButton)findViewById(R.id.homepagelogin_button);
+        mp_usertxt = (EditText)findViewById(R.id.mainpage_user_txt);
+        mp_passwordtxt = (EditText)findViewById(R.id.mainpage_password_txt);
         
         
         CA_button.setOnClickListener(new View.OnClickListener() {
@@ -41,29 +49,53 @@ public class MainActivity extends Activity {
         	
         });
         // Verify Login
-        /*
-        login_button.setOnClickListener(new View.OnClickListener() {
+ 
+     //   try{
+
+        openDB();
+
+       login_button.setOnClickListener(new View.OnClickListener() {
         	
         	public void onClick(View v)
         	{
+
         		String userTxt = mp_usertxt.getText().toString();
         		String passTxt = mp_passwordtxt.getText().toString();
+
         		// while (sql database == still has entries, loop)
         		//if ((userTxt.equals)||())// user Txt and passtxt match
         			//Then just set content view?  or start new activity
+        		
+        		Cursor temp = DB.queryStuff(userTxt, passTxt);
+        		
+        		temp.moveToNext();
+        	
+        		try
+        		{
+        			Intent intent = new Intent(MainActivity.this, HelloActivity.class);
+        			intent.putExtra("name", temp.getString(0));
+        			startActivity(intent);
+        		}
+        		catch (android.database.CursorIndexOutOfBoundsException e)
+        		{
+        			Intent intent = new Intent(MainActivity.this, LoginErrorActivity.class);
+        			startActivity(intent);
+
+        		}
         	}
+               	
+        }); 
         
-        	
-        });
-        	
-        	
-        */
-        		
-        		
-        		
     }
 
-
+	private void openDB() {
+		DB = new DBAdapter(this);
+		DB.open();
+	}
+	private void closeDB() {
+		DB.close();
+	}
+	
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

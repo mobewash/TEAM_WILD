@@ -19,5 +19,7 @@
     <string name="User">User</string>
     <string name="usernamemainpage">Username</string>
     <string name="password">Password</string>
+    <string name="title_activity_hello">HelloActivity</string>
+    <string name="title_activity_login_error">LoginErrorActivity</string>
 
 </resources>

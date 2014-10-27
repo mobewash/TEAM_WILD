@@ -22,13 +22,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
-            android:name="com.example.androidbanking.CreateAccount"
-			android:screenOrientation="portrait" 
-		/>
-        
-        
+            android:name=".CreateAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HelloActivity"
+            android:label="@string/title_activity_hello" >
+        </activity>
+        <activity
+            android:name=".LoginErrorActivity"
+            android:label="@string/title_activity_login_error" >
+        </activity>
     </application>
 
 </manifest>
