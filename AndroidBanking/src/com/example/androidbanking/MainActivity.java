@@ -58,7 +58,6 @@ public class MainActivity extends Activity {
         	
         	public void onClick(View v)
         	{
-
         		String userTxt = mp_usertxt.getText().toString();
         		String passTxt = mp_passwordtxt.getText().toString();
 
