@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.androidbanking.ChangeBalance">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter the amount to withdraw:"
+        android:id="@+id/withdrawText"
+        android:layout_marginTop="137dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/withdrawEnter"
+        android:text="10.00"
+        android:layout_below="@+id/withdrawText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/withdrawText"
+        android:layout_alignStart="@+id/withdrawText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/pinEnter"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pinEnter" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/withdrawButton"
+        android:id="@+id/withdrawButton"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/pinEnter"
+        android:layout_alignRight="@+id/pinEnter"
+        android:layout_alignEnd="@+id/pinEnter"
+        android:layout_alignLeft="@+id/pinEnter"
+        android:layout_alignStart="@+id/pinEnter" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userAccount"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/withdrawText"
+        android:layout_alignStart="@+id/withdrawText"
+        android:layout_marginTop="39dp"
+        android:text="User" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pwLine"
+        android:layout_below="@+id/userAccount"
+        android:layout_alignLeft="@+id/userAccount"
+        android:layout_alignStart="@+id/userAccount"
+        android:text="Password" />
+
+</RelativeLayout>
