@@ -2,22 +2,22 @@
 <pre-dex-items>
 
     <item
-        dex="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-ee576f91b45a6538d4156fc6e674b6f65034f74e.jar"
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        dex="C:\Users\Jacky\workspace\AndroidBanking\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-876de6b6041571a28dff9c24377d97a66cefb639.jar"
+        jar="C:\Users\Jacky\workspace\AndroidBanking\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="C:\Users\Jacky\workspace\AndroidBanking\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-d9dcfe93e6b56e3cc25cba343de0d783fc826eed.jar"
+        jar="D:\Eclipse\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.1.0"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
     <item
-        dex="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/intermediates/pre-dexed/debug/classes-abb374f1de1325f59d5b24abc5924c9d0c189936.jar"
-        jar="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        dex="C:\Users\Jacky\workspace\AndroidBanking\app\build\intermediates\pre-dexed\debug\classes-fe3f552eece8f34ff3bf6416aa1c4545d3b8ee16.jar"
+        jar="C:\Users\Jacky\workspace\AndroidBanking\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.0"
         sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
-    <item
-        dex="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-d5f1e5e44ba0f7b7ae1025e20ac5fc40fdbd3657.jar"
-        jar="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
 
 </pre-dex-items>

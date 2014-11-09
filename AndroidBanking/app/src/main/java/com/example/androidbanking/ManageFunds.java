@@ -48,7 +48,7 @@ public class ManageFunds extends Activity {
 
         final Bundle USER = this.getIntent().getBundleExtra("USER");
 
-            debitButton = (Button)findViewById(R.id.withdrawButton);
+            debitButton = (Button)findViewById(R.id.debitButton);
             creditButton = (Button)findViewById(R.id.depositButton);
             transferButton = (Button)findViewById(R.id.transferButton);
 
@@ -78,19 +78,19 @@ public class ManageFunds extends Activity {
                     finish(); //Closes this activity so its not taking up space, go to Main Page
                 }
             });
-/*
+
             transferButton.setOnClickListener(new View.OnClickListener(){
             @Override
 
             public void onClick(View v){
-                Intent selectAcctIntent = new Intent(v.getContext(),SelectAccount.class);
+                Intent selectAcctIntent = new Intent(v.getContext(),ChangeBalance.class);
                 USER.putString(OPTION_TAG, TRANSFER_OP); // Replaces current option
                 selectAcctIntent.putExtra("USER",USER);
                 startActivity(selectAcctIntent); // Not expecting sth back
                 finish(); //Closes this activity so its not taking up space, go to Main Page
                                         }
                        });
-*/
+
     }
 
 

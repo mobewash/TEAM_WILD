@@ -23,40 +23,44 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080001;
-        public static final int Records_textField=0x7f08001e;
+        public static final int Records_textField=0x7f080021;
         public static final int TextView01=0x7f080004;
         public static final int TextView02=0x7f080002;
-        public static final int action_settings=0x7f080023;
-        public static final int button3=0x7f080019;
-        public static final int button_logIn=0x7f080016;
-        public static final int changeCredit=0x7f08001f;
-        public static final int changeDebit=0x7f080020;
-        public static final int changeSavings=0x7f080021;
-        public static final int createAccountButton=0x7f080010;
-        public static final int depositButton=0x7f08001c;
-        public static final int editText_Credit=0x7f080013;
-        public static final int editText_Debit=0x7f080014;
-        public static final int editText_Savings=0x7f080015;
-        public static final int editText_user=0x7f080011;
-        public static final int homepagelogin_button=0x7f080017;
-        public static final int imageView=0x7f080022;
-        public static final int imageView1=0x7f08001b;
-        public static final int mainpage_password_txt=0x7f08001a;
-        public static final int mainpage_user_txt=0x7f080018;
-        public static final int manageButton=0x7f080012;
-        public static final int passwordtxt=0x7f08000e;
+        public static final int accountType1=0x7f08000e;
+        public static final int accountType2=0x7f08000f;
+        public static final int action_settings=0x7f080027;
+        public static final int button3=0x7f08001c;
+        public static final int button_logIn=0x7f080019;
+        public static final int changeCredit=0x7f080022;
+        public static final int changeDebit=0x7f080023;
+        public static final int changeSavings=0x7f080024;
+        public static final int createAccountButton=0x7f080013;
+        public static final int debitButton=0x7f08000a;
+        public static final int depositButton=0x7f08001f;
+        public static final int editText_Credit=0x7f080016;
+        public static final int editText_Debit=0x7f080017;
+        public static final int editText_Savings=0x7f080018;
+        public static final int editText_user=0x7f080014;
+        public static final int homepagelogin_button=0x7f08001a;
+        public static final int imageView=0x7f080025;
+        public static final int imageView1=0x7f08001e;
+        public static final int linear1=0x7f08000b;
+        public static final int mainpage_password_txt=0x7f08001d;
+        public static final int mainpage_user_txt=0x7f08001b;
+        public static final int manageButton=0x7f080015;
+        public static final int passwordtxt=0x7f080011;
         public static final int pinEnter=0x7f080009;
-        public static final int pintxt=0x7f08000f;
-        public static final int pwLine=0x7f08000c;
+        public static final int pintxt=0x7f080012;
+        public static final int spinner=0x7f080026;
         public static final int textView1=0x7f080000;
         public static final int textView2=0x7f080003;
         public static final int textView3=0x7f080005;
         public static final int textView4=0x7f080006;
-        public static final int transferButton=0x7f08001d;
-        public static final int userAccount=0x7f08000b;
-        public static final int usertxt=0x7f08000d;
-        public static final int withdrawButton=0x7f08000a;
-        public static final int withdrawEnter=0x7f080008;
+        public static final int transferButton=0x7f080020;
+        public static final int transferEnter=0x7f080008;
+        public static final int user1text=0x7f08000c;
+        public static final int user2text=0x7f08000d;
+        public static final int usertxt=0x7f080010;
         public static final int withdrawText=0x7f080007;
     }
     public static final class layout {
@@ -69,6 +73,7 @@ public final class R {
         public static final int manage_funds=0x7f030006;
         public static final int records=0x7f030007;
         public static final int selectaccount=0x7f030008;
+        public static final int transferfunds=0x7f030009;
     }
     public static final class menu {
         public static final int change_balance=0x7f070000;
@@ -108,9 +113,10 @@ public final class R {
         public static final int title_activity_login_error=0x7f050019;
         public static final int title_activity_manage_funds=0x7f05001a;
         public static final int title_activity_test=0x7f05001b;
-        public static final int usernamemainpage=0x7f05001c;
-        public static final int whichAccount=0x7f05001d;
-        public static final int withdrawButton=0x7f05001e;
+        public static final int transfer=0x7f05001c;
+        public static final int usernamemainpage=0x7f05001d;
+        public static final int whichAccount=0x7f05001e;
+        public static final int withdrawButton=0x7f05001f;
     }
     public static final class style {
         /** 

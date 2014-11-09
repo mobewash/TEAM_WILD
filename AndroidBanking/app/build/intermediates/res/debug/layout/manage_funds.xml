@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Debit"
-        android:id="@+id/withdrawButton"
+        android:id="@+id/debitButton"
         android:layout_marginTop="68dp"
         android:layout_below="@+id/textView3"
         android:layout_alignLeft="@+id/depositButton"
@@ -35,11 +35,11 @@
         android:layout_height="wrap_content"
         android:text="Credit"
         android:id="@+id/depositButton"
-        android:layout_below="@+id/withdrawButton"
-        android:layout_alignRight="@+id/transferButton"
-        android:layout_alignEnd="@+id/transferButton"
-        android:layout_alignLeft="@+id/transferButton"
-        android:layout_alignStart="@+id/transferButton" />
+        android:layout_below="@+id/debitButton"
+        android:layout_alignRight="@+id/debitButton"
+        android:layout_alignEnd="@+id/debitButton"
+        android:layout_alignLeft="@+id/debitButton"
+        android:layout_alignStart="@+id/debitButton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -50,4 +50,4 @@
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
-<!-- From: file:/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/manage_funds.xml -->
+<!-- From: file:/C:/Users/Jacky/workspace/AndroidBanking/app/src/main/res/layout/manage_funds.xml -->

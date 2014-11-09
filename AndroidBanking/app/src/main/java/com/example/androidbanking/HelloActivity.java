@@ -91,7 +91,8 @@ public class HelloActivity extends Activity {
                 startActivity(balanceIntent); // Not expecting sth back
 */
 
-                finish();
+           finish();
+
 
                 // DB.close();
             }

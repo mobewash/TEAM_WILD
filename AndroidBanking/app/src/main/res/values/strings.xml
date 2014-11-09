@@ -32,5 +32,6 @@
     <string name="title_activity_change_balance">ChangeBalance</string>
     <string name="withdrawButton">Withdraw</string>
     <string name="pinEnter">...</string>
+    <string name="transfer">Transfer</string>
 
 </resources>

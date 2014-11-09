@@ -236,7 +236,53 @@ public class DBAdapter {
 
     }
 
+    public Cursor queryUser(String user)
+    {
+        String[] columns = {KEY_ROWID,KEY_USER, KEY_PASSWORD, KEY_PIN, KEY_CREDIT, KEY_DEBIT, KEY_SAVINGS};
+        //DATABASE_TABLE + "." + KEY_USER + " = \'" + a + "\' AND " + DATABASE_TABLE + "." + KEY_PASSWORD + " = \'" + b + "\'"
+        return db.query(DATABASE_TABLE,
+                columns,
+                KEY_USER + " = \'" + user + "\'"
+                ,
+                null, null, null, null);
 
+    }
+    //transfer the money, return true if success.
+    public boolean transferBetween(String user1, String user2, String user1acc, String user2acc, double amount)
+    {
+
+        int credit_row = 3;
+        int debit_row = 4;
+        long rowID1, rowID2;
+
+        //song will add function if users are the same.
+        //if they are the same, then give error message.
+        Cursor firstCursor = queryUser(user1);
+        rowID1 = firstCursor.getLong(0);
+
+        Cursor secondCursor = queryUser(user2);
+        rowID2 = secondCursor.getLong(0);
+        double balance1 = 0,balance2 = 0, newBalance1 = 0, newBalance2 = 0;
+
+        //retrieve user1 balance
+        if (user1acc.equals(KEY_CREDIT))
+            balance1 = firstCursor.getDouble(credit_row);
+        else if(user1acc.equals(KEY_DEBIT))
+            balance1 = firstCursor.getDouble(debit_row);
+
+        if (balance1 < amount) return false;
+        //retrieve user2 balance
+        if (user2acc.equals(KEY_CREDIT))
+            balance2 = firstCursor.getDouble(credit_row);
+        else if(user2acc.equals(KEY_DEBIT))
+            balance2 = firstCursor.getDouble(debit_row);
+
+        newBalance1 = balance1 - amount;
+        newBalance2 = balance2 + amount;
+        updateAccountValue(rowID1, user1acc, newBalance1);
+        updateAccountValue(rowID2, user2acc, newBalance2);
+        return true;
+    }
 
 
 
@@ -271,4 +317,5 @@ public class DBAdapter {
 			onCreate(_db);
 		}
 	}
+
 }

@@ -2,177 +2,177 @@
 <merger version="2" >
 
     <dataSet config="21.0.0" >
-        <source path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/res" />
+        <source path="C:\Users\Jacky\workspace\AndroidBanking\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\res" />
     </dataSet>
     <dataSet config="main" >
-        <source path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res" >
+        <source path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res" >
             <file
                 name="gowildthing"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-hdpi/gowildthing.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-hdpi\gowildthing.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-hdpi\ic_launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="main"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-hdpi/main.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-hdpi\main.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="main_page"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-hdpi/main_page.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-hdpi\main_page.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="gowildthing"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-mdpi/gowildthing.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-mdpi\gowildthing.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-mdpi\ic_launcher.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="main"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-mdpi/main.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-mdpi\main.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="main_page"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-mdpi/main_page.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-mdpi\main_page.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="gowildthing"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xhdpi/gowildthing.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xhdpi\gowildthing.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xhdpi\ic_launcher.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="main"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xhdpi/main.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xhdpi\main.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="main_page"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xhdpi/main_page.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xhdpi\main_page.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="androidcornermoney"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xxhdpi/androidcornermoney.jpg"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xxhdpi\androidcornermoney.jpg"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="gowildthing"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xxhdpi/gowildthing.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xxhdpi\gowildthing.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xxhdpi\ic_launcher.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="main"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xxhdpi/main.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xxhdpi\main.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="main_page"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/drawable-xxhdpi/main_page.png"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\drawable-xxhdpi\main_page.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="accountpage"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/accountpage.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\accountpage.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_login_error"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/activity_login_error.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\activity_login_error.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="changebalance"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/changebalance.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\changebalance.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="createaccount"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/createaccount.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\createaccount.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="helloactivity"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/helloactivity.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\helloactivity.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="main"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/main.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\main.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="manage_funds"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/manage_funds.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\manage_funds.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="records"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/records.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\records.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="selectaccount"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/layout/selectaccount.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\selectaccount.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="change_balance"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/change_balance.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\change_balance.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="change_funds"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/change_funds.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\change_funds.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="hello"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/hello.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\hello.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="login_error"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/login_error.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\login_error.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="main"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/main.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\main.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="manage_funds"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/manage_funds.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\manage_funds.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="test"
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/menu/test.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\menu\test.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/values/dimens.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -180,7 +180,7 @@
                 </dimen>
             </file>
             <file
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/values/strings.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\values\strings.xml"
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
@@ -218,6 +218,8 @@
                 </string>
                 <string name="title_activity_manage_funds" >ManageFunds
                 </string>
+                <string name="transfer" >Transfer
+                </string>
                 <string name="changeSavings" >Savings
                 </string>
                 <string name="User" >User
@@ -246,7 +248,7 @@
                 </string>
             </file>
             <file
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/values/styles.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\values\styles.xml"
                 qualifiers="" >
 
                 <style
@@ -268,7 +270,7 @@
                 </style>
             </file>
             <file
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/values-v11/styles.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\values-v11\styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -279,7 +281,7 @@
                 </style>
             </file>
             <file
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/values-v14/styles.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\values-v14\styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -290,17 +292,22 @@
                 </style>
             </file>
             <file
-                path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/main/res/values-w820dp/dimens.xml"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\values-w820dp\dimens.xml"
                 qualifiers="w820dp-v13" >
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
+            <file
+                name="transferfunds"
+                path="C:\Users\Jacky\workspace\AndroidBanking\app\src\main\res\layout\transferfunds.xml"
+                qualifiers=""
+                type="layout" />
         </source>
-        <source path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/generated/res/rs/debug" />
-        <source path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/build/generated/res/generated/debug" />
+        <source path="C:\Users\Jacky\workspace\AndroidBanking\app\build\generated\res\rs\debug" />
+        <source path="C:\Users\Jacky\workspace\AndroidBanking\app\build\generated\res\generated\debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/admin/AndroidStudioProjects/AndroidBanking/app/src/debug/res" />
+        <source path="C:\Users\Jacky\workspace\AndroidBanking\app\src\debug\res" />
     </dataSet>
 
 </merger>

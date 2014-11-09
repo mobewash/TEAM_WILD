@@ -34,19 +34,25 @@ public class ChangeBalance extends Activity {
     private String pw;
     private Long id;
 
+    private String user1;
+    private String user2;
+    private String user1acct;
+    private String user2acct;
 
     private Double creditAmount = 0.00;
     private Double debitAmount = 0.00;
     private Double savingsAmount = 0.00;
 
     // View Objects
-    Button withdrawButton;
+    Button transferButton;
     TextView pinEnter;
-    TextView withdrawEnter;
+    TextView transferEnter;
     TextView optionText;
     TextView userAccount;
     TextView pwLine;
-
+    TextView user2Account;
+    TextView type1;
+    TextView type2;
     //DB
     DBAdapter DB;
 
@@ -66,10 +72,13 @@ public class ChangeBalance extends Activity {
         id = USER.getLong(ID_TAG);
 
         // TextView Initializations
-        userAccount = (TextView)findViewById(R.id.userAccount);
-        pwLine = (TextView)findViewById(R.id.pwLine);
+        userAccount = (TextView)findViewById(R.id.user1text);
+        user2Account = (TextView)findViewById(R.id.user2text);
+        type1 = (TextView)findViewById(R.id.accountType1);
+        type2 = (TextView)findViewById(R.id.accountType2);
+        //pwLine = (TextView)findViewById(R.id.pwLine);
         pinEnter = (TextView)findViewById(R.id.pinEnter);
-        withdrawEnter = (TextView)findViewById(R.id.withdrawEnter);
+        transferEnter = (TextView)findViewById(R.id.transferEnter);
         optionText = (TextView)findViewById(R.id.withdrawText);
 
         //Set Page Text
@@ -79,19 +88,25 @@ public class ChangeBalance extends Activity {
         //Open SQLite Database
         openDB();
 
-        withdrawButton = (Button) findViewById(R.id.withdrawButton);
-        withdrawButton.setText(Operation);
-        withdrawButton.setOnClickListener(new View.OnClickListener() {
+        transferButton = (Button) findViewById(R.id.debitButton);
+        transferButton.setText(Operation);
+        transferButton.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View v) {
                 // Operation decides sub/add
-                user= userAccount.getText().toString();
-                pw= pwLine.getText().toString();
+                //user = userAccount.getText().toString();
+                //pw = pwLine.getText().toString();
 
-                final Double amount = Double.parseDouble(withdrawEnter.getText().toString());
+                final Double amount = Double.parseDouble(transferEnter.getText().toString());
+                if(amount <= 0) return;
 
-                DB.updateAccountValue(id, Account, amount);
+                user1 = userAccount.getText().toString();
+                user2 = user2Account.getText().toString();
+                user1acct = type1.getText().toString();
+                user2acct = type2.getText().toString();
+                DB.transferBetween(user1, user2, user1acct, user2acct, amount);
+                //DB.updateAccountValue(id, Account, amount);
 
                 // if (Option.equals (Debit))
                 // {
@@ -126,7 +141,7 @@ public class ChangeBalance extends Activity {
                     }
                 }
                 */
-                pinEnter.setText(user+ " "+pw);
+                //pinEnter.setText(user + " " + pw);
                 //displayRecordSet(fundsCursor);
 /*
                 fundsCursor.moveToFirst();
@@ -163,7 +178,6 @@ public class ChangeBalance extends Activity {
 
 
                 */
-
 
 
                 //pinEnter.setText(fundsCursor.getString(3));

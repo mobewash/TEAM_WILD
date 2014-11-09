@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter the amount to withdraw:"
+        android:text="Enter the amount to transfer:"
         android:id="@+id/withdrawText"
         android:layout_marginTop="137dp"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/withdrawEnter"
+        android:id="@+id/transferEnter"
         android:text="10.00"
         android:layout_below="@+id/withdrawText"
         android:layout_centerHorizontal="true" />
@@ -50,8 +50,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/withdrawButton"
-        android:id="@+id/withdrawButton"
+        android:text="@string/transfer"
+        android:id="@+id/debitButton"
         android:layout_marginTop="45dp"
         android:layout_below="@+id/pinEnter"
         android:layout_alignRight="@+id/pinEnter"
@@ -59,25 +59,64 @@
         android:layout_alignLeft="@+id/pinEnter"
         android:layout_alignStart="@+id/pinEnter" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/userAccount"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/withdrawText"
-        android:layout_alignStart="@+id/withdrawText"
-        android:layout_marginTop="39dp"
-        android:text="User" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/transferEnter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp"
+        android:id="@+id/linear1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/pwLine"
-        android:layout_below="@+id/userAccount"
-        android:layout_alignLeft="@+id/userAccount"
-        android:layout_alignStart="@+id/userAccount"
-        android:text="Password" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.13">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user1text"
+                android:text="User Account"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user2text"
+                android:text="User2 Account"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.36">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accountType1"
+                android:layout_weight="1"
+                android:text="Account Type1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/accountType2"
+                android:layout_weight="1.39"
+                android:text="Account Type2" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
