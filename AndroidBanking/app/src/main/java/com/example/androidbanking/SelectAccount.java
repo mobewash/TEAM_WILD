@@ -21,6 +21,10 @@ public class SelectAccount extends Activity {
     public static final String DEBIT_DATA = "Debit";
     public static final String ACCOUNT_TAG = "Account"; // Might not need
 
+    public static final String KEY_CREDIT = "credit";
+    public static final String KEY_DEBIT = "debit";
+    public static final String KEY_SAVINGS = "savings";
+
     private String Operation;
     private String Account;
 
@@ -45,7 +49,17 @@ public class SelectAccount extends Activity {
         USER = getIntent().getBundleExtra("USER");
 
 
+
+
         changeCredit = (Button)findViewById(R.id.changeCredit);
+
+        //TESTING
+
+        //changeCredit.setText(String.valueOf(USER.getLong(ID_TAG)));
+
+        //TESTING
+
+
         //TESTING
         //changeCredit.setText(USER.getString(OPTION_TAG));
         //TESTING
@@ -54,7 +68,7 @@ public class SelectAccount extends Activity {
 
             public void onClick(View v){
                 Intent selectAcctIntent = new Intent(v.getContext(),ChangeBalance.class);
-                Account = "Credit";
+                Account = KEY_CREDIT;
                 USER.putString(DB1_TAG, Account);
                 selectAcctIntent.putExtra("USER", USER);
                 startActivity(selectAcctIntent); // Not expecting sth back
@@ -70,7 +84,7 @@ public class SelectAccount extends Activity {
 
             public void onClick(View v){
                 Intent selectAcctIntent = new Intent(v.getContext(),ChangeBalance.class);
-                Account = "Debit";
+                Account = KEY_DEBIT;
                 USER.putString(DB1_TAG, Account);
                 selectAcctIntent.putExtra("USER", USER);
                 startActivity(selectAcctIntent); // Not expecting sth back
@@ -87,7 +101,7 @@ public class SelectAccount extends Activity {
 
             public void onClick(View v){
                 Intent selectAcctIntent = new Intent(v.getContext(),ChangeBalance.class);
-                Account = "Savings";
+                Account = KEY_SAVINGS;
                 USER.putString(DB1_TAG, Account);
                 selectAcctIntent.putExtra("USER", USER);
                 startActivity(selectAcctIntent); // Not expecting sth back

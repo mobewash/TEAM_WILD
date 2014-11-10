@@ -33,10 +33,12 @@
     <string name="pinEnter">...</string>
     <string name="title_activity_change_balance">ChangeBalance</string>
     <string name="title_activity_change_funds">ChangeFunds</string>
+    <string name="title_activity_customer_mp">CustomerMP</string>
     <string name="title_activity_hello">HelloActivity</string>
     <string name="title_activity_login_error">LoginErrorActivity</string>
     <string name="title_activity_manage_funds">ManageFunds</string>
     <string name="title_activity_test">test</string>
+    <string name="title_activity_transfer_funds">transferFunds</string>
     <string name="usernamemainpage">Username</string>
     <string name="whichAccount">Which account would you like to...</string>
     <string name="withdrawButton">Withdraw</string>

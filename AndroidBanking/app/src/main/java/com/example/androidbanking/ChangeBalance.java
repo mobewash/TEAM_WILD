@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 import com.example.databasedemo.DBAdapter;
 
@@ -16,36 +17,51 @@ public class ChangeBalance extends Activity {
 
     Bundle USER = new Bundle();
 
+
+    final private String DEBIT_OP = "debit";
+    final private String CREDIT_OP = "credit";
+    final private String TRANSFER_OP = "transfer";
+
+
+    // From DB Adapter
+    public static final String KEY_CREDIT = "credit";
+    public static final String KEY_DEBIT = "debit";
+    public static final String KEY_SAVINGS = "savings";
+
+
     public static final String USER_TAG = "Username";
     public static final String ID_TAG = "Num_ID";
     public static final String OPTION_TAG = "Option";
     public static final String DB1_TAG = "DB1";
     public static final String DB2_TAG = "DB2";
     public static final String TYPE_TAG = "AcctType"; // User or Teller
-    public static final String CREDIT_DATA = "Credit";
-    public static final String DEBIT_DATA = "Debit";
+
+
+    public static final String CREDIT_DATA = "Credit";          // Bundle Tag for Credit Balance
+    public static final String DEBIT_DATA = "Debit";            // Bundle Tag for Debit Balance
     public static final String ACCOUNT_TAG = "Account";
 
+
+    public static Double current_data;
+
     private String Operation;
-    private String Account;
+    private String Account; // Account type
     private String KEY_ID;
     private String W = "Withdrawal", D = "Deposit", T = "Transfer";
     private String user;
     private String pw;
-    private Long id;
+    private Long numid;
 
-
-    private Double creditAmount = 0.00;
-    private Double debitAmount = 0.00;
-    private Double savingsAmount = 0.00;
 
     // View Objects
     Button withdrawButton;
     TextView pinEnter;
     TextView withdrawEnter;
     TextView optionText;
-    TextView userAccount;
-    TextView pwLine;
+    TextView user1Account;
+    TextView user2Account;
+    TextView accType1;
+    TextView accType2;
 
     //DB
     DBAdapter DB;
@@ -54,6 +70,10 @@ public class ChangeBalance extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+        // If Teller, set this ---> ???
         setContentView(R.layout.changebalance);
 
 
@@ -63,21 +83,24 @@ public class ChangeBalance extends Activity {
         Account = USER.getString(DB1_TAG);
         user = USER.getString(USER_TAG);
         pw = USER.getString("pw");
-        id = USER.getLong(ID_TAG);
+        numid = USER.getLong(ID_TAG);
+
+
 
         // TextView Initializations
-        userAccount = (TextView)findViewById(R.id.userAccount);
-        pwLine = (TextView)findViewById(R.id.pwLine);
+        user1Account = (TextView)findViewById(R.id.user1_editText);
+        user2Account = (TextView)findViewById(R.id.user2_editText);
+        accType1 = (TextView)findViewById(R.id.accType1);
+        accType2 = (TextView)findViewById(R.id.accType2);
+
         pinEnter = (TextView)findViewById(R.id.pinEnter);
         withdrawEnter = (TextView)findViewById(R.id.withdrawEnter);
         optionText = (TextView)findViewById(R.id.withdrawText);
 
         //Set Page Text
-        optionText.setText("Please enter the amount you wish to " + Operation + "This is your id" + id);
-        userAccount.setText(Account);
+        optionText.setText("Please enter the amount you wish to " + Operation);
+        user1Account.setText(Account);
 
-        //Open SQLite Database
-        openDB();
 
         withdrawButton = (Button) findViewById(R.id.withdrawButton);
         withdrawButton.setText(Operation);
@@ -85,129 +108,73 @@ public class ChangeBalance extends Activity {
             @Override
 
             public void onClick(View v) {
-                // Operation decides sub/add
-                user= userAccount.getText().toString();
-                pw= pwLine.getText().toString();
 
-                final Double amount = Double.parseDouble(withdrawEnter.getText().toString());
+                Double amount = Double.parseDouble(withdrawEnter.getText().toString());
+                Double newBalance = 0.00; // Will hold balance after transaction
 
-                DB.updateAccountValue(id, Account, amount);
+                //Open SQLite Database
+                openDB();
 
-                // if (Option.equals (Debit))
-                // {
-                //  amount = amount * -0.1;
-                // }
-                //
-
-                //Cursor fundsCursor = DB.queryStuff(user, password); // Cursor points @ Key_ID
-                // UNCOMMENT THIS BELOW
-                // Cursor fundsCursor = DB.queryAll(user, pw); // Cursor points @ Key_ID
-
-                /*
-                if (Account.equals("Debit"))
-                {
-                    if (Operation.equals(W)) {
-                        debitAmount = -amount;
-                    }
-
-                    else if (Operation.equals(D)) {
-                        debitAmount = amount;
-                    }
+                // If Debiting or Transferring, invert sign of "amount"
+                if (Operation.equals (DEBIT_OP) ||  Operation.equals (TRANSFER_OP))
+                {amount = amount * -1;
                 }
 
-                if (Account.equals("Savings"))
+                // Update User Account Balance if not "Transfer
+
+                if (Operation.equals(TRANSFER_OP))
                 {
-                    if (Operation.equals(W)) {
-                        savingsAmount = -amount;
-                    }
 
-                    else if (Operation.equals(D)) {
-                        savingsAmount = amount;
-                    }
+                    String user1 = user1Account.getText().toString();
+                    String user2 = user2Account.getText().toString();
+                    String acc1 = accType1.getText().toString();
+                    String acc2 = accType2.user2Account.getText().toString();
+
+                    //transferBetween(user1, user2, String user1acc, String user2acc, double amount)
+
+/*
+                    if (Account.equals(KEY_CREDIT))
+                    {USER.putDouble(CREDIT_DATA, newBalance );}
+                    else if (Account.equals(KEY_DEBIT))
+                    {USER.putDouble(DEBIT_DATA, newBalance );}
+*/
                 }
-                */
-                pinEnter.setText(user+ " "+pw);
-                //displayRecordSet(fundsCursor);
-/*
-                fundsCursor.moveToFirst();
-                pinEnter.setText(fundsCursor.getString(0)+
-                                //+fundsCursor.getString(1)
-                                //+fundsCursor.getString(2)
-                                //+fundsCursor.getString(3)+ ", "
-                                "Credit: "+fundsCursor.getString(4)+ ", "+
-                                "Debit:" +fundsCursor.getString(5)+ ", "+
-                                "Savings:" +fundsCursor.getString(6)+ ", +"
-                );
-*/
-
-                /* Delete comment
-                fundsCursor.moveToFirst();
-                DB.updateRow(fundsCursor.getLong(0),
-                        fundsCursor.getString(1),
-                        fundsCursor.getString(2),
-                        fundsCursor.getInt(3),
-                        2,
-
-                        fundsCursor.getDouble(5) + amount,
-                        fundsCursor.getDouble(6) + savingsAmount);
-                //pinEnter.setText(fundsCursor.getString(0));
-                fundsCursor.moveToFirst();
-                pinEnter.setText(fundsCursor.getString(0)+
-                                //+fundsCursor.getString(1)
-                                //+fundsCursor.getString(2)
-                                //+fundsCursor.getString(3)+ ", "
-                                "Credit: "+fundsCursor.getString(4)+ ", "+
-                                "Debit:" +fundsCursor.getString(5)+ ", "+
-                                "Savings:" +fundsCursor.getString(6)+ ", +"
-                );
+                
 
 
-                */
+                else
+                {
+                    newBalance = DB.updateAccountValue(numid, Account, amount);
+
+                    if (Account.equals(KEY_CREDIT))
+                    {USER.putDouble(CREDIT_DATA, newBalance );}
+
+                    else if (Account.equals(KEY_DEBIT))
+                    {USER.putDouble(DEBIT_DATA, newBalance);}
+                }
 
 
 
-                //pinEnter.setText(fundsCursor.getString(3));
-                //pinEnter.setText(fundsCursor.getString(4));
-
-/*
-
-                Intent mainIntent = new Intent(v.getContext(), MainActivity.class);
-
-
-                //manageIntent.putExtra("credit", fundsCursor.getString(3));
-                //manageIntent.putExtra("debit",fundsCursor.getString(4));
-                //manageIntent.putExtra("savings",fundsCursor.getString(5));
-                startActivity(mainIntent); // Not expecting sth back
-                //finish(); //Closes this activity so its not taking up space, go to Main Page
-                fundsCursor.close();
-                DB.close();
-                //finish();
 
 
 
-*/
+                //pinEnter.setText( "New Balance: " + newBalance + "Acc is " + Account);
 
+
+                // Apparently intents live as long as main sending activity is alive, \
+                // so bundles aren't updated
+                Intent manageIntent = new Intent(v.getContext(), HelloActivity.class);
+                manageIntent.putExtra("USER", USER); // Pass Bundle
+
+
+                //pinEnter.setText(newBalance + " Acc is " + Account +  USER.getDouble(CREDIT_DATA));
+                startActivity(manageIntent); // Not expecting sth back
+                finish();
             }
-
-
         });
-
-
-
-
-
-
-
-
-
-
         //TESTING
-
-
         //Operation = getIntent().getExtras().getString("Operation");
         //Account = getIntent().getExtras().getString("Account");
-
-
     }
 
 
@@ -252,7 +219,7 @@ public class ChangeBalance extends Activity {
                 String savings = cursor.getString(DBAdapter.COL_SAVINGS);
 
                 // Append data to the message:
-                message += "id=" + id
+                message += "numid=" + id
                         + ", user=" + user
                         + ", password=" + password
                         + ", pin=" + pin

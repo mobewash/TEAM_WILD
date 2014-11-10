@@ -45,6 +45,14 @@
             android:name="com.example.androidbanking.ChangeBalance"
             android:label="@string/title_activity_change_balance" >
         </activity>
+        <activity
+            android:name="com.example.androidbanking.CustomerMP"
+            android:label="@string/title_activity_customer_mp" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.transferFunds"
+            android:label="@string/title_activity_transfer_funds" >
+        </activity>
     </application>
 
 </manifest>

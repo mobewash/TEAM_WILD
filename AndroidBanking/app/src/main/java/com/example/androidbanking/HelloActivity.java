@@ -32,11 +32,11 @@ public class HelloActivity extends Activity {
 
 
         final Bundle USER = this.getIntent().getBundleExtra("USER");
-        String credit_data = Double.toString(USER.getDouble("CREDIT"));  //For Info Display
-        String debit_data = Double.toString(USER.getDouble("DEBIT"));   // For Info Display
+        String credit_data = Double.toString(USER.getDouble(CREDIT_DATA));  //For Info Display
+        String debit_data = Double.toString(USER.getDouble(DEBIT_DATA));   // For Info Display
+        String id_num = Long.toString(USER.getLong(ID_TAG));
 
         String user = "Not Null";
-
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.helloactivity);
@@ -47,18 +47,12 @@ public class HelloActivity extends Activity {
         TextView text_credit = (TextView)findViewById(R.id.editText_Credit);
         TextView text_debit = (TextView)findViewById(R.id.editText_Debit);
         TextView text_savings = (TextView)findViewById(R.id.editText_Savings);
-        /*
-		final String user = getIntent().getExtras().getString("name");
-        final String password = getIntent().getExtras().getString("pw");
-        String credit = String.valueOf(getIntent().getExtras().getDouble("credit"));
-        String debit = String.valueOf(getIntent().getExtras().getString("debit"));
-        String savings = String.valueOf(getIntent().getExtras().getString("savings"));
-        */
 
         if (USER.getString(USER_TAG)== null){user = "NULL";}
         else { user = USER.getString(USER_TAG);}
 
         text_user.setText(user);
+
         //String user = getIntent().getBundleExtra("USER");
         // .getString("USER_TAG");
         // Sets User's Account data for view
@@ -69,9 +63,11 @@ public class HelloActivity extends Activity {
         text_savings.setText(savings);
         */
         //Uncomment these things
+
+        //Testing --- set credit_data as rowid
         text_credit.setText(credit_data);
         text_debit.setText(debit_data);
-        text_savings.setText("SAVINGS");
+        text_savings.setText("Empty");
 
         // Set button function
         manageButton = (Button)findViewById(R.id.manageButton);
@@ -83,14 +79,6 @@ public class HelloActivity extends Activity {
                 Intent manageIntent = new Intent(v.getContext(), ManageFunds.class);
                 manageIntent.putExtra("USER", USER); // Pass Bundle
                 startActivity(manageIntent); // Not expecting sth back
-
-/*
-                // Testing
-                Intent balanceIntent = new Intent(v.getContext(), ChangeBalance.class);
-                balanceIntent.putExtra("USER", USER); // Pass Bundle
-                startActivity(balanceIntent); // Not expecting sth back
-*/
-
                 finish();
 
                 // DB.close();

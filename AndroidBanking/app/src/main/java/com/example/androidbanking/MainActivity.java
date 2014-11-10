@@ -47,81 +47,64 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
+
         CA_button = (Button) findViewById(R.id.button3);
-        login_button = (ImageButton)findViewById(R.id.homepagelogin_button);
-        mp_usertxt = (EditText)findViewById(R.id.mainpage_user_txt);
-        mp_passwordtxt = (EditText)findViewById(R.id.mainpage_password_txt);
-        
-        
+        login_button = (ImageButton) findViewById(R.id.homepagelogin_button);
+        mp_usertxt = (EditText) findViewById(R.id.mainpage_user_txt);
+        mp_passwordtxt = (EditText) findViewById(R.id.mainpage_password_txt);
+
+
         CA_button.setOnClickListener(new View.OnClickListener() {
-        	
-        	public void onClick(View v)
-        	{
-        		Intent intent = new Intent(v.getContext(),CreateAccount.class);
-        		startActivityForResult(intent,0);
-        		finish(); //Closes this activity
-        	}
-        	
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CreateAccount.class);
+                startActivityForResult(intent, 0);
+                finish(); //Closes this activity
+            }
+
         });
-        // Verify Login
- 
-     //   try{
-
-        openDB();
-
-       login_button.setOnClickListener(new View.OnClickListener() {
-        	
-        	public void onClick(View v)
-        	{
-        		String userTxt = mp_usertxt.getText().toString();
-        		String passTxt = mp_passwordtxt.getText().toString();
-
-        		//While (sql database == still has entries, loop)
-        		//If ((userTxt.equals)||())// user Txt and passtxt match
-        			//Then just set content view?  or start new activity
-        		
-        		Cursor temp = DB.queryStuff(userTxt, passTxt); // Cursor points @ Key_ID
-        		
-        		temp.moveToNext(); // Cursor now points @ User
-
-                /*
-                Uncomment to Test!
-                String tempo = Double.toString(temp.getDouble(4));
-                mp_usertxt.setText(tempo);
-                //mp_usertxt.setText("YOU" + temp.getString(0));
-                */
 
 
-        		try
-        		{
-        			Intent intent = new Intent(MainActivity.this, HelloActivity.class);
+            openDB();
 
-                    //USER.putLong(ID_TAG, temp.getLong(0));
-                    USER.putString(USER_TAG, temp.getString(0));
-                    USER.putDouble(CREDIT_DATA, temp.getDouble(3));
-                    USER.putDouble(DEBIT_DATA, temp.getDouble(4));
+            login_button.setOnClickListener(new View.OnClickListener() {
+
+                public void onClick(View v) {
+                    String userTxt = mp_usertxt.getText().toString();
+                    String passTxt = mp_passwordtxt.getText().toString();
+                    Cursor temp = DB.queryAll(userTxt, passTxt); // Cursor points @ Key_ID
+
+                    try {
+                        Intent intent = new Intent(MainActivity.this, HelloActivity.class);
+
+                        temp.moveToNext();
+                        USER.putString(USER_TAG, temp.getString(1));
+                        USER.putDouble(CREDIT_DATA, temp.getDouble(4));
+                        USER.putDouble(DEBIT_DATA, temp.getDouble(5));
+                        USER.putLong(ID_TAG, temp.getLong(0));
 
 
-        			intent.putExtra("USER", USER); //Bundle
-                    startActivity(intent);
-                    //DB.close(); //New addition, see if needed
+                        intent.putExtra("USER", USER); //Bundle
+                        startActivity(intent);
+                        temp.close();
+                        finish();
 
 
-                    temp.close();
-        		}
-        		catch (android.database.CursorIndexOutOfBoundsException e)
-        		{
-        			Intent intent = new Intent(MainActivity.this, LoginErrorActivity.class);
-        			startActivity(intent);
-                    temp.close();
+                    } catch (android.database.CursorIndexOutOfBoundsException e) {
+                        Intent intent = new Intent(MainActivity.this, LoginErrorActivity.class);
+                        startActivity(intent);
+                        temp.close();
+                        finish();
 
-        		}
-        	}
-               	
-        }); 
+                    }
+                }
 
-    }
+
+            });
+
+
+        }
+
 
 	private void openDB() {
 		DB = new DBAdapter(this);

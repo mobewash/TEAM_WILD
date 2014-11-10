@@ -153,6 +153,16 @@ public class DBAdapter {
 		return c;
 	}
 
+    /*
+    public Cursor queryDouble(long rowID, String Key) // Will make better version soon
+    {
+        Cursor rowCursor = this.getRow(rowID);
+        rowCursor.getDouble()
+
+
+    }
+    */
+
 	// Get a specific row (by rowId)
 	public Cursor getRow(long rowId) {
 		String where = KEY_ROWID + "=" + rowId;
@@ -187,29 +197,48 @@ public class DBAdapter {
 		return db.update(DATABASE_TABLE, newValues, where, null) != 0;
 	}
 
-    public boolean updateAccountValue(long rowId, String Account, double amount) {
+    public Double updateAccountValue(long rowId, String Account, double amount) {
         String where = KEY_ROWID + "=" + rowId;
-
 		/*
 		 * CHANGE 4:
 		 */
         // TODO: Update data in the row with new fields.
         // TODO: Also change the function's arguments to be what you need!
+        // Get current amount, add to operation amount
+        Cursor temp = this.queryAll(rowId);
+        Double newAmount = 0.0;
+
         // Create row's data:
+// Testing, uncomment other stuff
         ContentValues newValues = new ContentValues();
-
-
         if (Account.equals(KEY_CREDIT))
-        {newValues.put(KEY_CREDIT, amount);}
+        {
+            newAmount = amount + temp.getDouble(COL_CREDIT);
+            newValues.put(KEY_CREDIT, newAmount);}
         else if (Account.equals(KEY_DEBIT))
-        {newValues.put(KEY_DEBIT, amount);}
+        {
+            newAmount = amount + temp.getDouble(COL_DEBIT);
+            newValues.put(KEY_DEBIT, newAmount);}
         else if (Account.equals(KEY_SAVINGS))
-        {newValues.put(KEY_SAVINGS, amount);}
+        {
+            newAmount = amount + temp.getDouble(COL_SAVINGS);
+            newValues.put(KEY_SAVINGS, newAmount);}
         else
-        {newValues.put(KEY_CREDIT, 1000);}
+        {
+
+            newValues.put(KEY_CREDIT, amount + amount);}
 
         // Insert it into the database.
-        return db.update(DATABASE_TABLE, newValues, where, null) != 0;
+        boolean eventTrue =  db.update(DATABASE_TABLE, newValues, where, null) != 0;
+        temp.close(); // Close Cursor
+
+        // Checking if update happened
+
+        if (!(eventTrue))  // If update failed
+        {newAmount = -1.0;}
+
+        return newAmount;
+
     }
 	
 	public Cursor queryStuff(String username, String password)
@@ -235,6 +264,74 @@ public class DBAdapter {
                 null, null, null, null, null);
 
     }
+
+    public Cursor queryAll(long row_id)
+    {
+        String[] columns = {KEY_ROWID, KEY_USER, KEY_PASSWORD, KEY_PIN, KEY_CREDIT, KEY_DEBIT, KEY_SAVINGS};
+        //DATABASE_TABLE + "." + KEY_USER + " = \'" + a + "\' AND " + DATABASE_TABLE + "." + KEY_PASSWORD + " = \'" + b + "\'"
+        Cursor temp =  db.query(DATABASE_TABLE,
+                columns,
+                KEY_ROWID + " = \'" + row_id + "\'"
+                ,
+                null, null, null, null, null);
+        temp.moveToNext();
+      //temp.moveToPosition((int)row_id);
+        return temp;
+
+    }
+
+    public Cursor queryUser(String user)
+    {
+        String[] columns = {KEY_ROWID,KEY_USER, KEY_PASSWORD, KEY_PIN, KEY_CREDIT, KEY_DEBIT, KEY_SAVINGS};
+        //DATABASE_TABLE + "." + KEY_USER + " = \'" + a + "\' AND " + DATABASE_TABLE + "." + KEY_PASSWORD + " = \'" + b + "\'"
+         Cursor temp = db.query(DATABASE_TABLE,
+                columns,
+                KEY_USER + " = \'" + user + "\'"
+                ,
+                null, null, null, null);
+        temp.moveToNext();
+        return temp;
+
+    }
+
+    //transfer the money, return true if success.
+    public boolean transferBetween(String user1, String user2, String acctType1, String acctType2, double amount)
+    {
+
+        int credit_row = 3;
+        int debit_row = 4;
+        long rowID1, rowID2;
+
+        //song will add function if users are the same.
+        //if they are the same, then give error message.
+        Cursor firstCursor = queryUser(user1);
+        rowID1 = firstCursor.getLong(0);
+
+        Cursor secondCursor = queryUser(user2);
+        rowID2 = secondCursor.getLong(0);
+        double balance1 = 0,balance2 = 0, newBalance1 = 0, newBalance2 = 0;
+
+        //retrieve user1 balance
+        if (acctType1.equals(KEY_CREDIT))
+            balance1 = firstCursor.getDouble(credit_row);
+        else if(acctType1.equals(KEY_DEBIT))
+            balance1 = firstCursor.getDouble(debit_row);
+
+        if (balance1 < amount) return false;
+        //retrieve user2 balance
+        if (acctType2.equals(KEY_CREDIT))
+            balance2 = firstCursor.getDouble(credit_row);
+        else if(acctType2.equals(KEY_DEBIT))
+            balance2 = firstCursor.getDouble(debit_row);
+
+        newBalance1 = balance1 - amount;
+        newBalance2 = balance2 + amount;
+        updateAccountValue(rowID1, acctType1, newBalance1);
+        updateAccountValue(rowID2, acctType2, newBalance2);
+        return true;
+    }
+
+
 
 
 
