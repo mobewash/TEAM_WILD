@@ -128,7 +128,7 @@ public class ChangeBalance extends Activity {
                     String user1 = user1Account.getText().toString();
                     String user2 = user2Account.getText().toString();
                     String acc1 = accType1.getText().toString();
-                    String acc2 = accType2.user2Account.getText().toString();
+                    String acc2 = accType2.getText().toString();
 
                     //transferBetween(user1, user2, String user1acc, String user2acc, double amount)
 
@@ -139,7 +139,7 @@ public class ChangeBalance extends Activity {
                     {USER.putDouble(DEBIT_DATA, newBalance );}
 */
                 }
-                
+
 
 
                 else
