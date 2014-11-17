@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="21.0.0" >
+        <source path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/res" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res" >
+            <file
+                name="gowildthing"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-hdpi/gowildthing.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="main"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-hdpi/main.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="main_page"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-hdpi/main_page.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="gowildthing"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-mdpi/gowildthing.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="main"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-mdpi/main.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="main_page"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-mdpi/main_page.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="gowildthing"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xhdpi/gowildthing.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="main"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xhdpi/main.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="main_page"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xhdpi/main_page.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="androidcornermoney"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xxhdpi/androidcornermoney.jpg"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="gowildthing"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xxhdpi/gowildthing.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="main"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xxhdpi/main.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="main_page"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/drawable-xxhdpi/main_page.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="accountpage"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/accountpage.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_login_error"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/activity_login_error.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="changebalance"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/changebalance.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="createaccount"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/createaccount.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="customermp"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/customermp.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="helloactivity"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/helloactivity.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="manage_funds"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/manage_funds.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="poplayout"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/poplayout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="records"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/records.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="selectaccount"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/selectaccount.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="transferfunds"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/layout/transferfunds.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="change_balance"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/change_balance.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="change_funds"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/change_funds.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="customer_m"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/customer_m.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="hello"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/hello.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="login_error"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/login_error.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="main"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="manage_funds"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/manage_funds.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="test"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/test.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="transfer_funds"
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/menu/transfer_funds.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/values/dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="title_activity_change_funds" >ChangeFunds
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="title_activity_login_error" >LoginErrorActivity
+                </string>
+                <string name="title_activity_hello" >HelloActivity
+                </string>
+                <string name="Checking" >Checking
+                </string>
+                <string name="title_activity_customer_mp" >CustomerMP
+                </string>
+                <string name="title_activity_test" >test
+                </string>
+                <string name="CreateAccount" >Create Account!
+                </string>
+                <string name="changeDebit" >Debit
+                </string>
+                <string name="Username" >Username
+                </string>
+                <string name="whichAccount" >Which account would you like to...
+                </string>
+                <string name="Password" >Password
+                </string>
+                <string name="logout_change" >Log Out
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="Debit" >Debit
+                </string>
+                <string name="password" >Password
+                </string>
+                <string name="Forgot" >Forgot Password?
+                </string>
+                <string name="Pin" >Pin
+                </string>
+                <string name="title_activity_manage_funds" >ManageFunds
+                </string>
+                <string name="changeSavings" >Savings
+                </string>
+                <string name="User" >User
+                </string>
+                <string name="title_activity_change_balance" >ChangeBalance
+                </string>
+                <string name="title_activity_transfer_funds" >transferFunds
+                </string>
+                <string name="withdrawButton" >Withdraw
+                </string>
+                <string name="Savings" >Savings
+                </string>
+                <string name="NewUser" >New User
+                </string>
+                <string name="changeCredit" >Credit
+                </string>
+                <string name="Login" >Login Heree
+                </string>
+                <string name="pinEnter" >...
+                </string>
+                <string name="app_name" >AndroidBanking
+                </string>
+                <string name="Records" >Rec. will be displayed momentarily...
+                </string>
+                <string name="usernamemainpage" >Username
+                </string>
+                <string name="LoginButton" >Login Here
+                </string>
+            </file>
+            <file
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/values-v14/styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/main/res/values-w820dp/dimens.xml"
+                qualifiers="w820dp-v13" >
+                <dimen name="activity_horizontal_margin" >64dp
+                </dimen>
+            </file>
+        </source>
+        <source path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/build/generated/res/rs/debug" />
+        <source path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/build/generated/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/admin/AndroidStudioProjects/Song&apos;s Close Account/AndroidBanking/app/src/debug/res" />
+    </dataSet>
+
+</merger>

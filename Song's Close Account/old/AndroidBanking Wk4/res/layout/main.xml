@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.androidbanking.MainActivity" 
+    android:background="#8FBC8F">
+
+    <Button
+        android:id="@+id/button_logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/Forgot" />
+
+    <ImageButton
+        android:id="@+id/homepagelogin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_logIn"
+        android:layout_toRightOf="@+id/button_logIn"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/mainpage_user_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_logIn"
+        android:layout_alignRight="@+id/button_logIn"
+        android:layout_alignTop="@+id/homepagelogin_button"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mainpage_user_txt"
+        android:layout_alignBottom="@+id/mainpage_user_txt"
+        android:layout_toLeftOf="@+id/mainpage_user_txt"
+        android:text="@string/usernamemainpage"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainpage_user_txt"
+        android:layout_toLeftOf="@+id/mainpage_user_txt"
+        android:text="@string/password"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_logIn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/NewUser" />
+
+    <EditText
+        android:id="@+id/mainpage_password_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/homepagelogin_button"
+        android:layout_alignRight="@+id/mainpage_user_txt"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/androidcornermoney" />
+
+</RelativeLayout>
