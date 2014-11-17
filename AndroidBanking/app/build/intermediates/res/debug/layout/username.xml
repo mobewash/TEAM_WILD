@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/textView7"
+        android:layout_weight="0.10"
+        android:textSize="20sp"
+        android:padding="15dp"
+    >
+  </TextView>
+<!-- From: file:/C:/Users/Jacky/workspace/TEAM_WILD-Version-0.3/AndroidBanking/app/src/main/res/layout/username.xml -->
