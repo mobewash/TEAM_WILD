@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidbanking"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.androidbanking.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.CreateAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.androidbanking.HelloActivity"
+            android:label="@string/title_activity_hello" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.LoginErrorActivity"
+            android:label="@string/title_activity_login_error" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.ManageFunds"
+            android:label="@string/title_activity_manage_funds" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.SelectAccount"
+            android:label="@string/title_activity_change_funds" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.ChangeBalance"
+            android:label="@string/title_activity_change_balance" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.CustomerMain"
+            android:label="@string/title_activity_customer_main" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.TellerMain"
+            android:label="@string/title_activity_teller_main" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.ManageFundsTemplate"
+            android:label="@string/title_activity_manage_funds_template" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.CustomerManageFunds"
+            android:label="@string/title_activity_customer_manage_funds" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.ViewStatement"
+            android:label="@string/title_activity_view_statement" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.OpenAcct"
+            android:label="@string/title_activity_open_acct" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.CloseAcct"
+            android:label="@string/title_activity_close_acct" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.ManageAcctTemplate"
+            android:label="@string/title_activity_manage_acct_template" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.CustomerTransfer"
+            android:label="@string/title_activity_customer_transfer" >
+        </activity>
+        <activity
+            android:name="com.example.androidbanking.customerwithdrawal"
+            android:label="@string/title_activity_customerwithdrawal" >
+        </activity>
+    </application>
+
+</manifest>

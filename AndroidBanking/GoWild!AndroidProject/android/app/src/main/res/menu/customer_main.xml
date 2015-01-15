@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.androidbanking.CustomerMain" >
+<!--    <item android:id="@+id/Logout"
+        android:title="Logout"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/ViewStatement"
+        android:title="ViewStatement"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/TransferFunds"
+        android:title="TransferFunds"
+        android:orderInCategory="100"
+        android:showAsAction="never" />-->
+
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/inside_logout_icon"
+        android:title="@string/logout_title"
+        android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/refreshButton"
+        android:icon="@drawable/refresh_button_icon_1004174422"
+        android:title="@string/refresh"
+        android:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.androidbanking.HelloActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="User Account"
+        android:id="@+id/withdrawText"
+        android:layout_marginTop="42dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_user"
+        android:layout_toRightOf="@+id/withdrawText"
+        android:layout_toEndOf="@+id/withdrawText"
+        android:layout_alignBottom="@+id/withdrawText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage Funds"
+        android:id="@+id/manageButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="112dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_Credit"
+        android:layout_below="@+id/editText_user"
+        android:layout_alignLeft="@+id/editText_user"
+        android:layout_alignStart="@+id/editText_user"
+        android:layout_marginTop="45dp"
+        android:layout_alignRight="@+id/editText_user"
+        android:layout_alignEnd="@+id/editText_user" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_Debit"
+        android:layout_below="@+id/editText_Credit"
+        android:layout_alignLeft="@+id/editText_Credit"
+        android:layout_alignStart="@+id/editText_Credit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_Savings"
+        android:layout_below="@+id/editText_Debit"
+        android:layout_alignLeft="@+id/editText_Debit"
+        android:layout_alignStart="@+id/editText_Debit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Credit"
+        android:id="@+id/textView2"
+        android:layout_toStartOf="@+id/manageButton"
+        android:layout_above="@+id/editText_Debit"
+        android:layout_toLeftOf="@+id/manageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Debit"
+        android:id="@+id/selectUserTextView"
+        android:layout_above="@+id/editText_Savings"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Savings"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/editText_Savings"
+        android:layout_alignLeft="@+id/selectUserTextView"
+        android:layout_alignStart="@+id/selectUserTextView" />
+
+</RelativeLayout>
